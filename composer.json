@@ -1,0 +1,40 @@
+{
+    "name": "uxin/multi",
+    "description": "curl multi request",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/support": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "license": "Private Protocol",
+    "homepage": "https://git.xin.com/gujun3/curlmulti",
+    "authors": [
+        {
+            "name": "gujun3",
+            "email": "gujun3@xin.com"
+        }
+    ],
+     "autoload": {
+        "psr-4": {
+            "UXin\\Curlmulti\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UXin\\Curlmulti\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UXin\\Curlmulti\\CurlMultiServiceProvider"
+            ],
+            "aliases": {
+                "CurlMulti": "UXin\\Curlmulti\\CurlMultiFacade"
+            }
+        }
+    }
+}
